@@ -15,6 +15,9 @@
 		11621DAF2A529E1600037019 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11621DAE2A529E1600037019 /* GameType.swift */; };
 		11621DB32A52A5B900037019 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11621DB22A52A5B900037019 /* ViewModifiers.swift */; };
 		11621DB62A52A73700037019 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11621DB52A52A73700037019 /* GameView.swift */; };
+		11C91FA92A54136100351A4B /* GameSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C91FA82A54136100351A4B /* GameSquare.swift */; };
+		11C91FAB2A54147100351A4B /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C91FAA2A54147100351A4B /* SquareView.swift */; };
+		11DFD5BF2A540CCB00645B36 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DFD5BE2A540CCB00645B36 /* GameService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		11621DAE2A529E1600037019 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		11621DB22A52A5B900037019 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		11621DB52A52A73700037019 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		11C91FA82A54136100351A4B /* GameSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSquare.swift; sourceTree = "<group>"; };
+		11C91FAA2A54147100351A4B /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		11DFD5BE2A540CCB00645B36 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +66,13 @@
 			isa = PBXGroup;
 			children = (
 				11621D9C2A52265800037019 /* AppEntry.swift */,
+				11621D9E2A52265800037019 /* StartView.swift */,
 				11621DB42A52A71C00037019 /* Game Screen */,
 				11621DAD2A529E0000037019 /* Models */,
 				11621DB12A52A58500037019 /* Utilities */,
-				11621D9E2A52265800037019 /* StartView.swift */,
 				11621DA02A52265900037019 /* Assets.xcassets */,
-				11621DA22A52265900037019 /* Preview Content */,
 				11621DAA2A52283300037019 /* Launch Screen.storyboard */,
+				11621DA22A52265900037019 /* Preview Content */,
 			);
 			path = "Tic Tac Toe";
 			sourceTree = "<group>";
@@ -98,7 +104,10 @@
 		11621DB42A52A71C00037019 /* Game Screen */ = {
 			isa = PBXGroup;
 			children = (
+				11DFD5BE2A540CCB00645B36 /* GameService.swift */,
 				11621DB52A52A73700037019 /* GameView.swift */,
+				11C91FA82A54136100351A4B /* GameSquare.swift */,
+				11C91FAA2A54147100351A4B /* SquareView.swift */,
 			);
 			path = "Game Screen";
 			sourceTree = "<group>";
@@ -177,8 +186,11 @@
 				11621D9F2A52265800037019 /* StartView.swift in Sources */,
 				11621D9D2A52265800037019 /* AppEntry.swift in Sources */,
 				11621DAF2A529E1600037019 /* GameType.swift in Sources */,
+				11DFD5BF2A540CCB00645B36 /* GameService.swift in Sources */,
 				11621DB32A52A5B900037019 /* ViewModifiers.swift in Sources */,
 				11621DB62A52A73700037019 /* GameView.swift in Sources */,
+				11C91FA92A54136100351A4B /* GameSquare.swift in Sources */,
+				11C91FAB2A54147100351A4B /* SquareView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
