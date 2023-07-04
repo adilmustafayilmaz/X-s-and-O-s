@@ -14,6 +14,7 @@ class GameService: ObservableObject {
     @Published var possibleeMoves = Move.all
     @Published var gameOver = false
     @Published var gameBoard = GameSquare.reset
+    @Published var isThinking = false
     
     
     var gameType = GameType.single
@@ -31,7 +32,7 @@ class GameService: ObservableObject {
     }
     
     var boardDisabled: Bool {
-        gameOver || !gameStarted
+        gameOver || !gameStarted || isThinking
     }
     
     
@@ -42,6 +43,7 @@ class GameService: ObservableObject {
             player2.name = player2Name
         case .bot:
             self.gameType = .bot
+            player2.name = UIDevice.current.name
         case .peer:
             self.gameType = .peer
         case .undermined:
@@ -94,10 +96,30 @@ class GameService: ObservableObject {
                     possibleeMoves.remove(at: matchingIndex)
                 }
                 toggleCurrent()
+                if gameType == .bot && currentPlayer.name == player2.name {
+                    Task {
+                        await deviceMove()
+                    }
+                }
             }
             if possibleeMoves.isEmpty {
                 gameOver = true
             }
         }
+    }
+    
+    func deviceMove() async {
+        isThinking.toggle()
+        
+        try? await Task.sleep(nanoseconds: 1_000_000_000_)
+        
+        if let move = possibleeMoves.randomElement() {
+            if let matchingIndex = Move.all.firstIndex(where: { $0 == move }) {
+                makeMove(at: matchingIndex)
+            }
+        }
+        
+        isThinking.toggle()
+        
     }
 }
