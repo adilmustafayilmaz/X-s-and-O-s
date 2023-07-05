@@ -20,6 +20,7 @@
 		11C91FAD2A5431A400351A4B /* YourNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C91FAC2A5431A400351A4B /* YourNameView.swift */; };
 		11C91FB12A555D0100351A4B /* MPConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C91FB02A555D0100351A4B /* MPConnectionManager.swift */; };
 		11C91FB42A55698D00351A4B /* MPGameMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C91FB32A55698D00351A4B /* MPGameMove.swift */; };
+		11C91FB62A55797A00351A4B /* MPPeersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C91FB52A55797A00351A4B /* MPPeersView.swift */; };
 		11DFD5BF2A540CCB00645B36 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DFD5BE2A540CCB00645B36 /* GameService.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		11C91FAE2A555BF100351A4B /* Tic-Tac-Toe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Tic-Tac-Toe-Info.plist"; sourceTree = SOURCE_ROOT; };
 		11C91FB02A555D0100351A4B /* MPConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPConnectionManager.swift; sourceTree = "<group>"; };
 		11C91FB32A55698D00351A4B /* MPGameMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPGameMove.swift; sourceTree = "<group>"; };
+		11C91FB52A55797A00351A4B /* MPPeersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPPeersView.swift; sourceTree = "<group>"; };
 		11DFD5BE2A540CCB00645B36 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 			children = (
 				11C91FB02A555D0100351A4B /* MPConnectionManager.swift */,
 				11C91FB32A55698D00351A4B /* MPGameMove.swift */,
+				11C91FB52A55797A00351A4B /* MPPeersView.swift */,
 			);
 			path = MultiPeerConnectivity;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				11621DAF2A529E1600037019 /* GameType.swift in Sources */,
 				11DFD5BF2A540CCB00645B36 /* GameService.swift in Sources */,
 				11621DB32A52A5B900037019 /* ViewModifiers.swift in Sources */,
+				11C91FB62A55797A00351A4B /* MPPeersView.swift in Sources */,
 				11C91FB12A555D0100351A4B /* MPConnectionManager.swift in Sources */,
 				11621DB62A52A73700037019 /* GameView.swift in Sources */,
 				11C91FA92A54136100351A4B /* GameSquare.swift in Sources */,

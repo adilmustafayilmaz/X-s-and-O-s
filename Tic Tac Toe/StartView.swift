@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StartView: View {
     @EnvironmentObject var game: GameService
+    @StateObject var connectionManager: MPConnectionManager
     @State private var gameType: GameType = .undermined
     @AppStorage("yourName") private var  yourName: String = ""
     @State private var opponentName: String = ""
@@ -22,7 +23,9 @@ struct StartView: View {
     
     
     init(yourName: String){
+        
         self.yourName = yourName
+        _connectionManager = StateObject(wrappedValue: MPConnectionManager(yourName: yourName))
     }
     
     var body: some View {
@@ -51,7 +54,8 @@ struct StartView: View {
                 case .bot:
                     EmptyView()
                 case .peer:
-                    EmptyView()
+                    MPPeersView(startGame: $startGame)
+                        .environmentObject(connectionManager)
                 case .undermined:
                     EmptyView()
                 }
@@ -88,6 +92,7 @@ struct StartView: View {
         .navigationTitle("X's and O's")
         .fullScreenCover(isPresented: $startGame){
             GameView()
+                .environmentObject(connectionManager)
         }
         .alert("Change Name", isPresented: $changeName, actions: {
             TextField("New Name", text: $newName)
