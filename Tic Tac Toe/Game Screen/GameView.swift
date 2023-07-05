@@ -53,10 +53,12 @@ struct GameView: View {
                 }
                 .overlay {
                     if game.isThinking {
+                        Spacer()
                         VStack {
                             Text(" Thinking... ")
                                 .foregroundColor(Color(.systemBackground))
                                 .background(Rectangle().fill(Color.primary))
+                                
                             ProgressView()
                         }
                     }
